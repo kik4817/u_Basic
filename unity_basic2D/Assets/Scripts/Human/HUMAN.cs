@@ -13,13 +13,13 @@ public class HUMAN : MonoBehaviour
     private Head head;
 
     [SerializeField] private Color legColor;
-    [SerializeField] private int legSortingOrder = 10;
+    [SerializeField] private int legSortingOrder = 0;
     [SerializeField] private Color armColor;
-    [SerializeField] private int armSortingOrder = 10;
+    [SerializeField] private int armSortingOrder = 0;
     [SerializeField] private Color bodyColor;
-    [SerializeField] private int bodySortingOrder = -10;
+    [SerializeField] private int bodySortingOrder = 10;
     [SerializeField] private Color headColor;
-    [SerializeField] private int headSortingOrder = 10;
+    [SerializeField] private int headSortingOrder = 0;
 
     // Start is called before the first frame update
     void Start()

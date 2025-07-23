@@ -448,9 +448,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allBones: []
   legColor: {r: 0.19702278, g: 0.9528302, b: 0.0764062, a: 1}
-  legSortingOrder: -10
+  legSortingOrder: 0
   armColor: {r: 0.9811321, g: 0.06016379, b: 0.88443345, a: 1}
-  armSortingOrder: 10
+  armSortingOrder: 0
   bodyColor: {r: 0.9245283, g: 0.915323, b: 0.13519046, a: 1}
   bodySortingOrder: 10
   headColor: {r: 0.09927912, g: 0.38814935, b: 0.9150943, a: 1}
@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 532294847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: 2.88, z: 0}
+  m_LocalPosition: {x: 2.94, y: 2.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
