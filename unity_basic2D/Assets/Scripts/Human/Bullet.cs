@@ -15,19 +15,18 @@ public class Bullet : MonoBehaviour
             if(_sr != null )
             {
                 _sr.color = Color.red;
-                Invoke(nameof(ResetColor), 0.5f);
+                //Invoke(nameof(ResetColor), 0.5f);
             }
 
-            //if(collision.TryGetComponent(out SpriteRenderer sr))
+            //if (collision.TryGetComponent(out SpriteRenderer sr))
             //{
             //    sr.color = Color.red;
             //}
-
         }
     }
 
-    private void ResetColor(SpriteRenderer sr)
-    {
-        sr.color = Color.white;
-    }
+    //private void ResetColor(SpriteRenderer sr)
+    //{
+    //    sr.color = Color.white;
+    //}
 }

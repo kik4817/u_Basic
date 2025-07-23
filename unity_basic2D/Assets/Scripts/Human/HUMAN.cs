@@ -7,13 +7,19 @@ public class HUMAN : MonoBehaviour
 {
     [SerializeField] private HumanBone[] allBones;
 
-    [SerializeField] private Arm arm;
-    [SerializeField] private Leg leg;
-    [SerializeField] private Body body;
-    [SerializeField] private Head head;
+    private Arm arm;
+    private Leg leg;
+    private Body body;
+    private Head head;
 
     [SerializeField] private Color legColor;
     [SerializeField] private int legSortingOrder = 10;
+    [SerializeField] private Color armColor;
+    [SerializeField] private int armSortingOrder = 10;
+    [SerializeField] private Color bodyColor;
+    [SerializeField] private int bodySortingOrder = -10;
+    [SerializeField] private Color headColor;
+    [SerializeField] private int headSortingOrder = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +35,10 @@ public class HUMAN : MonoBehaviour
 
         //arm = GetComponentsInChildren<Arm>(); // 복수형태 왼쪽, 오른족
 
-        //leg.SetRenderProperty(legColor, legSortingOrder);
-       
+        arm.SetRenderProperty(armColor, legSortingOrder);
+        leg.SetRenderProperty(legColor, legSortingOrder);
+        body.SetRenderProperty(bodyColor, legSortingOrder);
+        head.SetRenderProperty(headColor, legSortingOrder);
     }
 
     // Update is called once per frame
