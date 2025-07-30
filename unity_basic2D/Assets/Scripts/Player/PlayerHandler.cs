@@ -75,12 +75,11 @@ public class PlayerHandler : MonoBehaviour
 
         if (horizontal == 0)
         {
-            playerAnimatorController.PlayBoolAnimation();
-               }
+            playerAnimatorController.PlayerMoveAnimation();
+        }
         else
         {
-            playerAnimatorController.PlayBoolAnimation("IsDance", true);
-            playerAnimatorController.PlayBoolAnimation("IsMove", true);
+            playerAnimatorController.PlayerDanceAnimation();           
         }
         //Debug.Log($"horizontalÀÇ °ª : {horizontal}");
 

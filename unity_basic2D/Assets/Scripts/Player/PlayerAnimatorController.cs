@@ -16,8 +16,13 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void PlayerMoveAnimation()
     {
-        playerAnimatorController.PlayBoolAnimation("IsMove", true);
-        playerAnimatorController.PlayBoolAnimation("IsDance", false);
+        PlayBoolAnimation("IsMove", true);
+        PlayBoolAnimation("IsDance", false);
+    }
+    public void PlayerDanceAnimation()
+    {
+        PlayBoolAnimation("IsMove", false);
+        PlayBoolAnimation("IsDance", true);
     }
     private void PlayBoolAnimation(string paramName, bool enable)
     {
