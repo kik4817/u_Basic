@@ -27,7 +27,18 @@ public class PlayerAnimatorController : MonoBehaviour
     private void PlayBoolAnimation(string paramName, bool enable)
     {
         animator.SetBool(paramName, enable);
+    }    
+    public void PlayFloatAnimation(string paramName, float value)
+    {
+        animator.SetFloat(paramName, value);
     }
-
+    private void PlayIntAnimation(string paramName, int value)
+    {
+        animator.SetInteger(paramName, value);
+    }
+    private void PlayTriggerAnimation(string paramName)
+    {
+        animator.SetTrigger(paramName);
+    }
 
 }

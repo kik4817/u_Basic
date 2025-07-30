@@ -16,6 +16,8 @@ public class PlayerHandler : MonoBehaviour
     
     private PlayerAnimatorController playerAnimatorController;
 
+    private float horizontal = Input.GetAxisRaw("Horizontal");
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -71,16 +73,29 @@ public class PlayerHandler : MonoBehaviour
         // 2. rigidbody.velocity 변경해서 이동을 구현한다.
 
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (horizontal == 0)
-        {
-            playerAnimatorController.PlayerMoveAnimation();
+        //if (horizontal == 0)
+        //{
+        //    playerAnimatorController.PlayerMoveAnimation();
+        //}
+        //else
+        //{
+        //    playerAnimatorController.PlayerDanceAnimation();           
+        //}      
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {            
+            horizontal *= 0.5f;           
         }
-        else
-        {
-            playerAnimatorController.PlayerDanceAnimation();           
-        }
+          
+        playerAnimatorController.PlayFloatAnimation("Speed", Mathf.Abs(horizontal));
+        
+
+        // 최대 속도 변수를 만들고, 현재 속도와 이동 방향을 곱해서 그 값이 0~1값으로 반환되게 만드는 코드를 구현해보세요
+
+        // 리
+
         //Debug.Log($"horizontal의 값 : {horizontal}");
 
         // 위에 있는 horizontal을 이용해서 vector2의 x값을 변경하는 코드를 만들어보세요
