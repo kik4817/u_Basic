@@ -16,7 +16,7 @@ public class PlayerHandler : MonoBehaviour
     
     private PlayerAnimatorController playerAnimatorController;
 
-    private float horizontal = Input.GetAxisRaw("Horizontal");
+    private float horizontal;
 
     private void Awake()
     {
@@ -72,8 +72,9 @@ public class PlayerHandler : MonoBehaviour
         // 1. 플레이어의 입력을 받아야 합니다. A, D // 화살표 <-, -> x의 좌표를 변경해야합니다.
         // 2. rigidbody.velocity 변경해서 이동을 구현한다.
 
+        //horizontal = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
 
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxis("Horizontal"); // -1 ~ 1
 
         //if (horizontal == 0)
         //{
@@ -84,7 +85,7 @@ public class PlayerHandler : MonoBehaviour
         //    playerAnimatorController.PlayerDanceAnimation();           
         //}      
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {            
             horizontal *= 0.5f;           
         }
