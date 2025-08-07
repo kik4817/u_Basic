@@ -27,4 +27,8 @@ public class GameOverButtenContaniner : MonoBehaviour
         EditorApplication.isPlaying = false;
 #endif
     }
+    public void ButtonNext(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
 }

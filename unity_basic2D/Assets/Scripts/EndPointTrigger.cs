@@ -6,6 +6,7 @@ using UnityEngine;
 public class EndPointTrigger : MonoBehaviour
 {
     BoxCollider2D _collider2D;
+    [SerializeField] GameObject GameClearPanel;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class EndPointTrigger : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("게임의 끝 지점에 도착했습니다.");
+            GameClearPanel.SetActive(true);
         }
     }
 }

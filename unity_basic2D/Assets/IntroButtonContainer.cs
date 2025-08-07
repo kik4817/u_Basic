@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class IntroButtonContainer : MonoBehaviour
-{
+{    
     // 4개의 버튼이 포함되어 있습니다. 시작, 듀토리얼, 옵션, 종료
     public void ButtonStart()
     {
@@ -35,5 +35,5 @@ public class IntroButtonContainer : MonoBehaviour
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #endif
-    }
+    }    
 }
